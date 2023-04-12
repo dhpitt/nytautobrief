@@ -18,7 +18,7 @@ for sect in sections:
         summary += '.'
     message_stub += f'\nIn {sect}:\n{summary}\n' 
 
-message_stub += 'That\'s all for today. Until tomorrow,\nAutoBrief'
+message_stub += '\n\nThat\'s all for today. Until tomorrow,\nAutoBrief'
 
 # Date the message for today
 todays_date = datetime.date.today()
