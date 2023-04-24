@@ -10,7 +10,6 @@ from google.oauth2.credentials import Credentials
 from googleapiclient.discovery import build
 from googleapiclient.errors import HttpError
 
-
 def send_email(to: str = 'david.h.pitt@gmail.com', subject:str = 'Your morning briefing', body: str = './message.txt'):
     """Create and send an email message.
        Print the returned message and id.
@@ -21,7 +20,7 @@ def send_email(to: str = 'david.h.pitt@gmail.com', subject:str = 'Your morning b
       for guides on implementing OAuth2 for the application.
     """
     SCOPES = ['https://www.googleapis.com/auth/gmail.compose']
-
+    creds = None
     if os.path.exists('token.json'):
         creds = Credentials.from_authorized_user_file('token.json', SCOPES)
     try:
