@@ -5,7 +5,6 @@ import datetime
 import os
 from email.message import EmailMessage
 
-import google.auth
 from google.oauth2.credentials import Credentials
 from googleapiclient.discovery import build
 from googleapiclient.errors import HttpError
